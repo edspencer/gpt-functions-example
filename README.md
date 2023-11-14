@@ -4,12 +4,12 @@
 
 This project demonstrates the integration of OpenAI's Assistants technology to automatically generate the JSON you need to have OpenAI call your own functions. The project uses OpenAI's recent updates to function calling and integrates them into a TypeScript-based task management application using a SQLite database and Prisma.
 
+The blog post that introduces and explains this code can be found at https://edspencer.net/2023/11/15/using-chatgpt-to-generate-chatgpt-assistants/.
+
 ## Features
 
 - Automatic generation of OpenAI Function Call JSON objects for internal APIs.
 - Integration with OpenAI's Chat Completions API.
-- Usage of TypeScript for API implementation.
-- SQLite database management using Prisma.
 - Generation and execution of Function Calls for internal APIs.
 
 ## Getting Started
@@ -17,6 +17,7 @@ This project demonstrates the integration of OpenAI's Assistants technology to a
 1. Clone the repository from GitHub
 2. Install the necessary dependencies via `npm` or `yarn`.
 3. Run `npx prisma migrate dev` to create the sqlite database
+4. Set your OPENAI_API_KEY as an environment variable
 
 ## Usage
 
@@ -54,7 +55,7 @@ This project demonstrates the integration of OpenAI's Assistants technology to a
 
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) 2023 Ed Spencer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -76,4 +77,4 @@ SOFTWARE.
 
 ## Acknowledgments
 
-Credit to the author of the original blog post for the concept and initial implementation.
+Credit to the author of the original blog post (https://edspencer.net/2023/11/15/using-chatgpt-to-generate-chatgpt-assistants/) for the concept and initial implementation.
