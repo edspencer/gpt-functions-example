@@ -1,0 +1,22 @@
+{
+  "name": "gpt-functions-example",
+  "version": "1.0.0",
+  "description": "Simple example of how to use Chat GPT to generate Chat GPT function definitions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "openai",
+    "gpt",
+    "ai"
+  ],
+  "author": "Ed Spencer",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.6.0",
+    "commander": "^11.1.0",
+    "openai": "^4.17.5",
+    "prisma": "^5.6.0"
+  }
+}

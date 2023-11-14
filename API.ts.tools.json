@@ -1,0 +1,133 @@
+{
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "addTask",
+        "description": "Adds a new task to the database.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the task."
+            },
+            "priority": {
+              "type": "number",
+              "description": "The priority of the task, with lower numbers indicating higher priority."
+            },
+            "completed": {
+              "type": "boolean",
+              "description": "Whether the task is marked as completed."
+            },
+            "deleted": {
+              "type": "boolean",
+              "description": "Whether the task is marked as deleted."
+            }
+          },
+          "required": ["name"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "updateTask",
+        "description": "Updates a task in the database.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "The ID of the task to update."
+            },
+            "updates": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The updated name of the task."
+                },
+                "priority": {
+                  "type": "number",
+                  "description": "The updated priority of the task."
+                },
+                "completed": {
+                  "type": "boolean",
+                  "description": "The updated completed status of the task."
+                }
+              }
+            }
+          },
+          "required": ["id", "updates"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "getTasks",
+        "description": "Retrieves all tasks from the database.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "onlyPending": {
+              "type": "boolean",
+              "description": "A boolean indicating whether to return only tasks not marked as completed."
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "removeTask",
+        "description": "Soft deletes a task in the database.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "The ID of the task to delete."
+            }
+          },
+          "required": ["id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "completeTask",
+        "description": "Marks a task as completed in the database.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "The ID of the task to mark as completed."
+            }
+          },
+          "required": ["id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "deleteAllTasks",
+        "description": "Deletes all tasks in the database.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "completedOnly": {
+              "type": "boolean",
+              "description": "A boolean indicating whether to delete only completed tasks."
+            }
+          }
+        }
+      }
+    }
+  ]
+}
